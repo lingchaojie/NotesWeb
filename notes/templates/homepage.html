@@ -1,0 +1,51 @@
+{% load staticfiles %}
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" type="text/css" href="{% static 'multiblue/style.css' %}" />
+<title>Multi-Blue by Bryant Smith</title>
+</head>
+
+<body>
+    <div id="page">
+      <div id="pagetop">
+		<h1 style="text-align:center;padding-left:50px">UCL  COMP214P Team11</h1><br><br><br>
+        <div class="links" id="navcontainer">
+            <ul>
+           	   	<li><a href="#">Home</a></li>
+               	<li><a href="#">View Notes</a></li>
+                <li><a href="Register">Register</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="Addnote">Add Notes</a></li>
+            </ul>
+        </div>
+         </div>
+        <div id="header">      </div>
+
+  {% for notes in all_Notes %}
+<div id="main">
+	<div class="content">
+        	<div class="main_top">
+            	<h1>{{notes.title}}</h1>
+            </div>
+            
+           	<div class="main_body">
+
+            </div>
+                {{notes.content}}
+			</div><br><br><br><br><br><br>
+            <div class="clear">&nbsp;</div>
+        </div>
+{% endfor %}
+
+
+<div id="footer">
+    <h2>
+        <span style="float:right;padding-right:80px"></span></h2>>
+        </div>        
+        
+        
+        
+        </div>
+</body>
+</html>
